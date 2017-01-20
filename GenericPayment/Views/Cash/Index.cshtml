@@ -1,0 +1,28 @@
+﻿@model GenericPayment.Models.PaymentDetails
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<form class="container" id="form-agree">
+    <h3 style="padding-top: 10px">This is Cash sample code</h3>
+    <h3>Your payment details as following:</h3>
+    <div class="custommargin">Total: @Model.Currency @Model.Total.ToString("0.00")</div>
+    <div class="custommargin">Cash key: @Model.CashKey</div>
+    <div class="custommargin">Note for seller: @Html.EditorFor(item => Model.Note, new {id = "note"})</div>
+    <input type="hidden"
+           value="@Model.CashKey"
+           id="cashkey" />
+    <input class="custommargin"
+           type="submit"
+           id="agree"
+           value="Agree to pay when delivery">
+    <input class="custommargin"
+           type="submit"
+           id="cancel"
+           value="Cancel">
+</form>
+
+@section scripts {
+    <script src="~/assets/js/cash-checkout.js"></script>
+}

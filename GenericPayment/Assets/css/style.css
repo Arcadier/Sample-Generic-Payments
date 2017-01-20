@@ -1,0 +1,12 @@
+﻿.custommargin {
+    margin: 10px;
+}
+
+#agree {
+    background: url(/assets/img/pp.png);
+    border: 0;
+    height: 26px;
+    width: 82px;
+    display: inline-block;
+    background-size: 100%;
+}
